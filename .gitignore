@@ -7,3 +7,5 @@ iso
 *.swo
 .\#*
 cookbooks/**/metadata.json
+tmp/
+cookbooks/
