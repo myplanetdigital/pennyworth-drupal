@@ -1,6 +1,11 @@
 name "pennyworth"
 description "Components required for the pennyworth continuous deployment pipeline"
-run_list( "recipe[reprepro]",
+run_list( "recipe[php::module_curl]",
+          "recipe[php::module_gd]",
+          "recipe[php::module_mysql]",
+          "recipe[drush::make]",
+          "recipe[mysql::server]",
+          "recipe[reprepro]",
           "recipe[java]",
           "recipe[postfix]",
           "recipe[pennyworth::ssh_key]",

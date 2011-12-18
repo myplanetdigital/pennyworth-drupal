@@ -1,0 +1,23 @@
+{ "id" : "drupal",
+  "version" : {
+    "major" : "1.9",
+    "minor" : "3"
+  },
+  "project_type" : "package_from_drupal_install_profile",
+  "git_branch" : "master",
+  "git_url" : "git://github.com/$GITHUB_USER/$PROJECT-deploy.git",
+  "test_commands" : [
+    "./scripts/1-commit-stage/1-build.sh"
+  ],
+  "build_commands" : [
+    "./scripts/1-commit-stage/2-test.sh"
+  ],
+  "package_commands": [
+    "./scripts/1-commit-stage/3-package.sh"
+  ],
+  "child_projects" : [
+  ],
+  "remote_poll": true,
+  "clean" : true,
+  "wipeoutworkspace" : true
+}
