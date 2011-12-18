@@ -1,7 +1,7 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    apache2 (0.99.4)
+    apache2 (1.0.0)
     apt (1.1.2)
     build-essential (1.0.0)
     chef_handler (1.0.4)
@@ -36,7 +36,7 @@ PATH
       gpg (>= 0.0.0)
 
 DEPENDENCIES
-  apache2 (= 0.99.4)
+  apache2 (= 1.0.0)
   apt (= 1.1.2)
   build-essential (= 1.0.0)
   gpg (= 0.0.1)
