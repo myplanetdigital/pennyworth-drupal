@@ -8,14 +8,15 @@ cookbook 'apt',             '1.1.2'
 cookbook 'build-essential', '1.0.0'
 cookbook 'gpg',             '0.0.1'
 cookbook 'java',            '1.1.0'
-cookbook 'jenkins',         #0.6.0
-    :path => 'cookbooks-sources'
+cookbook 'jenkins',         #0.5.0-dev
+  :git => 'https://github.com/fnichol/chef-jenkins.git',
+  :ref => 'master'
 cookbook 'leiningen',       '0.2.0'
 cookbook 'pennyworth',      #0.2.1
-    :path => 'cookbooks-sources'
+  :path => 'cookbooks-sources'
 cookbook 'postfix',         '0.8.4'
 cookbook 'reprepro',        #0.3.0
-    :path => 'cookbooks-sources'
+  :path => 'cookbooks-sources'
 cookbook 'runit',           '0.14.2'
 
 # DRUPAL
