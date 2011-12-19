@@ -1,7 +1,7 @@
 { "id" : "drupal",
   "version" : {
-    "major" : "1.9",
-    "minor" : "3"
+    "major" : "0.0",
+    "minor" : "1"
   },
   "project_type" : "package_from_drupal_install_profile",
   "git_branch" : "master",
