@@ -31,8 +31,8 @@ SITE
 
 GIT
   remote: git@github.com:patcon/chef-drush.git
-  ref: cdd3ff841
-  sha: cdd3ff841a207a3fb786d8681c3c9d3f674d0cee
+  ref: refactor
+  sha: de1d72009b030becee20615c0c8f453f02aef2ec
   specs:
     drush (0.9.1)
       php (>= 0.0.0)

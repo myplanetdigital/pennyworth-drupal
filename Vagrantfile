@@ -12,16 +12,8 @@ Vagrant::Config.run do |config|
       chef.data_bags_path = "data_bags"
       chef.cookbooks_path = [ "cookbooks", "cookbooks-overrides" ]
       chef.roles_path = "roles"
-      chef.add_role "pennyworth"
+      chef.add_role "pennyworth_drupal"
       chef.add_recipe "vim"
-      chef.json = {
-        :mysql => {
-          :server_root_password   => 'root',
-          :server_repl_password   => 'root',
-          :server_debian_password => 'root',
-          :bind_address           => '127.0.0.1'
-        }
-      }
     end
   end
 end
