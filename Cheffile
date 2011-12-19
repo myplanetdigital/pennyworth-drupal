@@ -10,7 +10,7 @@ cookbook 'gpg',             '0.0.1'
 cookbook 'java',            '1.1.0'
 cookbook 'jenkins',         #0.5.0-dev
   :git => 'https://github.com/fnichol/chef-jenkins.git',
-  :ref => 'master'
+  :ref => 'develop'
 cookbook 'leiningen',       '0.2.0'
 cookbook 'pennyworth',      #0.2.1
   :path => 'cookbooks-sources'
@@ -22,7 +22,7 @@ cookbook 'runit',           '0.14.2'
 # DRUPAL
 cookbook 'drush',
   :git => 'git@github.com:patcon/chef-drush.git',
-  :ref => 'refactor'
+  :ref => 'cdd3ff841'
 cookbook 'git'
 cookbook 'php'
 cookbook 'mysql'

@@ -10,7 +10,6 @@ SITE
       yum (>= 0.0.0)
     gpg (0.0.1)
       minitest (>= 0.0.0)
-    iptables (0.9.3)
     java (1.1.0)
       apt (>= 0)
     leiningen (0.2.0)
@@ -32,19 +31,18 @@ SITE
 
 GIT
   remote: git@github.com:patcon/chef-drush.git
-  ref: refactor
-  sha: 6add3909480351161c00b016e1e7099e9833bfc1
+  ref: cdd3ff841
+  sha: cdd3ff841a207a3fb786d8681c3c9d3f674d0cee
   specs:
     drush (0.9.1)
       php (>= 0.0.0)
 
 GIT
   remote: https://github.com/fnichol/chef-jenkins.git
-  ref: master
-  sha: 317ab1983718559395ac639248b34ab1e4ae5778
+  ref: develop
+  sha: 898256c3755e084c93b5c022053388400f2db5e4
   specs:
     jenkins (0.5.0)
-      iptables (>= 0.0.0)
       java (>= 0.0.0)
       runit (>= 0.0.0)
 
