@@ -31,6 +31,12 @@
       "server_repl_password": "root",
       "server_debian_password": "root",
       "bind_address": "127.0.0.1"
+    },
+    "reprepro": {
+      "architectures": [
+        "amd64",
+        "noarch"
+      ]
     }
   }
 }
