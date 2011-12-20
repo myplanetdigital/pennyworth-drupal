@@ -5,7 +5,7 @@
   },
   "project_type" : "package_from_drupal_install_profile",
   "git_branch" : "master",
-  "git_url" : "git://github.com/$GITHUB_USER/$PROJECT-deploy.git",
+  "git_url" : "git@github.com:$GITHUB_USER/$PROJECT-deploy.git",
   "test_commands" : [
     "./scripts/1-commit-stage/1-build.sh"
   ],
