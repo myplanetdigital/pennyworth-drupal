@@ -74,6 +74,19 @@
        5) Release a vagrant repo to make local development of install profiles more seamless.
        6) Implement a demo feature-set for _dev/_stage/_prod methodology with Environment module.
 
+** Drupal-Specific Usage
+
+Assuming you have Vagrant install and working already...
+
+    $ sudo gem install librarian
+
+    $ git clone https://github.com/myplanetdigital/pennyworth-drupal.git -b drupal
+    $ cd pennyworth-drupal && git submodule init && git submodule update
+    $ librarian-chef install
+    $ vagrant up
+
+The check out localhost:8080 for the jenkins instance (has some other jobs from the general pennyworth project)
+
 ** vagrant support
    - you can use 'vagrant up' to launch a virtualbox instance based on
      Ubuntu Natty 11.04 amd64 to run pennyworth
