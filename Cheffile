@@ -26,6 +26,8 @@ cookbook 'drush',
 cookbook 'git'
 cookbook 'php'
 cookbook 'mysql'
+cookbook 'pennyworth_drupal',
+  :path => 'cookbooks-sources'
 
 # PERSONAL
 cookbook 'vim'

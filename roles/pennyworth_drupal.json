@@ -11,7 +11,8 @@
     "recipe[php::module_mysql]",
     "recipe[drush::make]",
     "recipe[mysql::server]",
-    "role[pennyworth]"
+    "role[pennyworth]",
+    "recipe[pennyworth_drupal]"
   ],
   "description": "Adds extra functionality for drupal on top of pennyworth, hopefully avoiding overriding customizations.",
   "chef_type": "role",
