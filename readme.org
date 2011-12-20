@@ -81,8 +81,11 @@ Assuming you have Vagrant install and working already...
     $ sudo gem install librarian
 
     $ git clone https://github.com/myplanetdigital/pennyworth-drupal.git -b drupal
+
     $ cd pennyworth-drupal && git submodule init && git submodule update
+
     $ librarian-chef install
+
     $ vagrant up
 
 The check out localhost:8080 for the jenkins instance (has some other jobs from the general pennyworth project)
