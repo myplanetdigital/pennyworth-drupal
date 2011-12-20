@@ -29,6 +29,7 @@
      generated from an install profile in the first "commit stage", which will be
      deployed to any subsequent environments, be it for testing or staging or
      production.
+
    - due to the nature of having a single install profile suffice for all environments,
      specific methologies will need to be followed. This is a work in progress, but is
      expected to involve a combination of profiler (for its 'base profile' functionality),
@@ -36,11 +37,21 @@
      settings.php environment flags), features and features_override (to manage the
      configuration that will be enabled/disabled by Environment).
 
+     The general idea is that the site-in-a-deb (built from an install profile with a makefile)
+     will contain features for any configuration in any environment. An environment flag will
+     be set in the settings.php file for each environment, and this will be symlinked in
+     as part of the deploy scripts. Environment will read the environment from here, and
+     enabled/disabled features according to feature namespacing conventions (ie. ends in "_dev"
+     or "_prod" or whatever).
+
      This will be further documented in the demo install profile itself:
+
      http://github.com/patcon/demo
+
    - the demo install profile will itself be nested as a submodule within the demo-deploy
      repo. This repo will contain all the scripts and tests used throughout the deployment
      pipeline, allowing developers full control over the entire pipeline process.
+
    - The commit stage will be triggered by any changes in either the demo profile or the
      demo-deploy repo. The internal demo submodule will be automatically commited, so that
      the version of the profile will be "pinned" to a specific version of the demo-deploy
@@ -49,18 +60,19 @@
 
      the demo-deploy repo can be used as a template for running continuous delivery on your
      own install profile:
+     
      http://github.com/patcon/demo-deploy
+
    - CURRENT STATE: currently, the commit stage is only partially implemented, and aspects
      of the demo install profile aren't yet fleshed out.
+
    - TO DO:
-     1) add post-install script to deb so that db dump is imported (trigger DB import by
-     having an ENV variable set when apt-get installed
-     2) Replace reprepro with freight for apt repository storage
-     3) implement jenkins build pipeline tool, and add rudimentary testing stage
-     4) Add example for deployment, perhaps using heavywater's interesting knife deploy
-     tools. Look into rollback options and pre-deploy backup.
-     5) Release a vagrant repo to make local development of install profiles more seamless.
-     6) Implement a demo feature-set for _dev/_stage/_prod methodology with Environment module.
+       1) add post-install script to deb so that db dump is imported (trigger DB import by having an ENV variable set when apt-get installed)
+       2) Replace reprepro with freight for apt repository storage
+       3) implement jenkins build pipeline tool, and add rudimentary testing stage
+       4) Add example for deployment, perhaps using heavywater's interesting knife deploy tools. Look into rollback options and pre-deploy backup.
+       5) Release a vagrant repo to make local development of install profiles more seamless.
+       6) Implement a demo feature-set for _dev/_stage/_prod methodology with Environment module.
 
 ** vagrant support
    - you can use 'vagrant up' to launch a virtualbox instance based on
